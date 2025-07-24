@@ -128,7 +128,9 @@ Platform-based performance
 
 
 👩‍💻 Created by
+
 Dilsha De Silva
+
 📍 Business Analyst Intern | ICT Undergraduate | Data Enthusiasist
 
-🌐 LinkedIn Profile www.linkedin.com/in/dilsha-de-silva-9554a6315
+🌐 LinkedIn Profile (www.linkedin.com/in/dilsha-de-silva-9554a6315)
