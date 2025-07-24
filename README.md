@@ -24,27 +24,32 @@ To extract actionable insights from social media data using MySQL by analyzing:
 
 ## 📝 Key SQL Queries
 
-Total Engagement Rate 
+🏷️Total Engagement Rate 
+
 SELECT 
     CONCAT(ROUND(SUM(`Engagement Rate`)/1000 , 1),'K') AS total_engagement_rate
 FROM social_media_engagement; 
 
-No Of Location 
+🏷️No Of Location 
+
 SELECT 
     CONCAT(ROUND(COUNT(*)/1000, 0), 'K') AS no_of_locations
 FROM social_media_engagement;
 
-AVG Engagement Rate 
+🏷️AVG Engagement Rate 
+
 SELECT 
     ROUND(AVG(`Engagement Rate`), 2) AS avg_engagement_rate
 FROM social_media_engagement;
 
-AVG Toxcity Score 
+🏷️AVG Toxcity Score 
+
 SELECT 
     ROUND(AVG(`Toxity Score`), 2) AS avg_toxity_score
 FROM social_media_engagement;
 
-Like Count by Emotion Type (as %) 
+🏷️Like Count by Emotion Type (as %) 
+
 SELECT `Emotion Type`, 
     SUM(`Likes Count`) AS like_count
 FROM social_media_engagement
@@ -55,7 +60,8 @@ SELECT `Emotion Type`,
 FROM social_media_engagement
 GROUP BY `Emotion Type`;
 
-Brand Engagement
+🏷️Brand Engagement
+
 SELECT 
     `Brand Name`, 
     ROUND(SUM(`Engagement Rate`), 2) AS total_engagement
@@ -63,7 +69,8 @@ FROM social_media_engagement
 GROUP BY `Brand Name`
 ORDER BY total_engagement DESC;
 
-Days of Week by Sentiment 
+🏷️Days of Week by Sentiment 
+
 SELECT 
     `ï»¿Day of Week`, 
     `Sentiment Label`, 
@@ -71,20 +78,22 @@ SELECT
 FROM social_media_engagement
 GROUP BY `ï»¿Day of Week`, `Sentiment Label`;
 
-Platforms by Parameter 
--- Likes per Platform
+🏷️Platforms by Parameter 
+
+📱Likes per Platform
 SELECT Platform, SUM(`Likes Count`) AS value FROM social_media_engagement GROUP BY Platform;
 
--- Shares per Platform
+📱Shares per Platform
 SELECT Platform, SUM(`Shares Count`) AS value FROM social_media_engagement GROUP BY Platform;
 
--- Comments per Platform
+📱 Comments per Platform
 SELECT Platform, SUM(`Comments Count`) AS value FROM social_media_engagement GROUP BY Platform;
 
--- Avg Toxity Score per Platform
+📱 Avg Toxity Score per Platform
 SELECT Platform, ROUND(AVG(`Toxity Score`), 2) AS value FROM social_media_engagement GROUP BY Platform;
 
-Topic category 
+🏷️Topic category 
+
 SELECT 
     `Topic Category`, 
     ROUND(SUM(`Engagement Rate`), 2) AS total_engagement
@@ -93,7 +102,8 @@ GROUP BY `Topic Category`
 ORDER BY total_engagement DESC;
 
 
-Platform by Reactions  
+🏷️Platform by Reactions  
+
 SELECT 
     Platform,
     SUM(`Likes Count`) AS total_likes,
@@ -120,4 +130,5 @@ Platform-based performance
 👩‍💻 Created by
 Dilsha De Silva
 📍 Business Analyst Intern | ICT Undergraduate | Data Enthusiasist
+
 🌐 LinkedIn Profile www.linkedin.com/in/dilsha-de-silva-9554a6315
